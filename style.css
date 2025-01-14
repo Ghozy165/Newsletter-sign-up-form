@@ -1,0 +1,303 @@
+:root {
+    --primary-tomato: hsl(4, 100%, 67%);
+    --primary-tomato-opacity: hsl(4, 100%, 80%);
+    --neutral-dark-slate-grey: hsl(234, 29%, 20%);
+    --neutral-charcoal-grey: hsl(235, 18%, 26%);
+    --neutral-grey: hsl(231, 7%, 60%);
+    --neutral-white: hsl(0, 0%, 100%);
+
+    font-size: 16px;
+}
+
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+body {
+    background-color: var(--neutral-charcoal-grey);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: var(--neutral-white);
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.sign-up > .card-image{
+    width: 100%;
+}
+
+.sign-up > .card-image > img{
+    width: 100%;
+}
+
+.card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    margin-top: 1rem;
+    gap: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.card-content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--neutral-dark-slate-grey);
+    margin: 0;
+}
+
+.card-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--neutral-dark-slate-grey);
+    margin: 0;
+}
+
+.card-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    line-height: 1.5rem;
+}
+
+ul {
+    list-style-image: url('./assets/images/icon-list.svg');
+    margin: 0;
+}
+
+ul li {
+    position: relative;
+    padding-top: 0;
+    padding-left: 1rem;
+    padding-bottom: .5rem;
+}
+
+ul li span {
+    font-size: 1rem;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+form .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: .5rem;
+    margin-bottom: 2rem;
+}
+
+form .form-group label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--neutral-dark-slate-grey);
+}
+
+form .form-group label span {
+    display: none;
+    color: var(--primary-tomato);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+form .form-group input {
+    border: .15rem solid var(--neutral-grey);
+    border-radius: .5rem;
+    padding: 1rem;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+form .form-group input:focus {
+    outline: none;
+    border-color: var(--neutral-dark-slate-grey);
+}
+
+form .form-group input::placeholder {
+    color: var(--neutral-grey);
+}
+
+form .form-group button, .card-footer button {
+    width: 100%;
+    border: none;
+    border-radius: .5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: var(--neutral-dark-slate-grey);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--neutral-white);
+    cursor: pointer;
+}
+
+form .form-group button:hover, .card-footer button:hover {
+    background-color: var(--primary-tomato);
+    transition: .3s;
+    box-shadow: 0 8px 8px 0 var(--primary-tomato-opacity);
+}
+
+.success {
+    display: none;
+}
+
+.success > .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 3rem;
+}
+
+.success > .card-content > img {
+    width: 20%;
+}
+
+.success > .card-content > h1 {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 700;
+    color: var(--neutral-dark-slate-grey);
+    margin: 0;
+}
+
+.success > .card-content > p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--neutral-dark-slate-grey);
+    margin: 0;
+}
+   
+.success > .card-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+
+@media (min-width: 600px) {
+    
+    .container {
+        background-color: var(--neutral-charcoal-grey);
+        width: 70vw;
+        height: 70vh;
+        padding: 1rem;
+    }
+
+    .card {
+        height: fit-content;
+        max-height: 90vh;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: stretch;
+        border-radius: 2rem;
+        background-color: var(--neutral-white);
+    }
+
+    .sign-up > .card-image{
+        max-width: 90%;
+        max-height: 90%;
+        margin: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        border-radius: 1rem;
+        overflow: hidden;
+    }    
+    .sign-up > .card-image img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }    
+
+    .sign-up > .card-content {
+        width: 100%;
+        justify-content: center;
+        align-items: left;
+        gap: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .sign-up > .card-content > h1 {
+        font-size: 3.5rem;
+    }
+
+    .sign-up > .card-content > p {
+        font-size: 1.2rem;
+    }
+
+    .success {
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        gap: 3rem;
+    }
+
+    .success > .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        gap: 2.5rem;
+    }
+
+    .success > .card-content > img {
+        width: 15%;
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+
+    .success > .card-content > h1 {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .success > .card-content > p {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .success > .card-footer button {
+        width: 80%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 1.2rem;
+    }
+
+}
