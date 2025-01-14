@@ -30,11 +30,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [My Solution](https://newsletter-sign-up-form-lake.vercel.app/)
 
 ## My process
 
